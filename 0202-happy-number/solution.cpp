@@ -1,0 +1,19 @@
+class Solution {
+public:
+    bool isHappy(int n) {
+        int  num = n;
+
+        while (num != 1 and num != 4){
+            int sum = 0;
+            while (num > 0){
+                int rem = num % 10;
+                sum += rem *rem;
+                num /= 10;
+                }
+            num = sum;
+        }
+        
+
+        return num == 1;
+    }
+};
